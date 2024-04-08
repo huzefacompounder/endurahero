@@ -1,0 +1,1356 @@
+{
+	"info": {
+		"_postman_id": "4e8d680a-6351-4dce-be8d-7c37fcac1a9d",
+		"name": "EnduraHero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32134311"
+	},
+	"item": [
+		{
+			"name": "userRoutes",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "balar03@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "default"
+										},
+										{
+											"key": "username",
+											"value": "yash",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/user/register",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "emailOrUsername",
+											"value": "balar03@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/user/login",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify-otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "balar03@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "8540",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/user/verify-otp",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-otp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserProfile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "65f41945b39c56f9eeec6335",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/user/getUserProfile",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"getUserProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userProfileUpdate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userId",
+											"value": "65f41945b39c56f9eeec6335",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "yash",
+											"type": "text"
+										},
+										{
+											"key": "profileImage",
+											"type": "file",
+											"src": "postman-cloud:///1eed7957-050d-4a70-aaab-64a8b1c92b46"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/user/userProfileUpdate",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"userProfileUpdate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ImageUploadDelete",
+					"item": [
+						{
+							"name": "DeleteImage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "deleteImageName",
+											"value": "image1710327630963.jpg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/upload/DeleteImage",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"upload",
+										"DeleteImage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "uploadImage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "postman-cloud:///1eee11b0-e4a2-41d0-a6f7-ba6912ae2c88"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/upload/uploadImage",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"upload",
+										"uploadImage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Track Activities",
+					"item": [
+						{
+							"name": "AddTrackActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "timestamp",
+											"value": "1st march 2024",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "distance",
+											"value": "5.70km",
+											"type": "text"
+										},
+										{
+											"key": "route",
+											"value": "2024-03-01T06-37-43.908Z-replcaed.png",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "5:30/km",
+											"type": "text"
+										},
+										{
+											"key": "activityType",
+											"value": "running",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/track/AddTrackActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"track",
+										"AddTrackActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetUserAllActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/track/GetUserAllActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"track",
+										"GetUserAllActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSingleActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "65e1b0484fdfbf042d13e792",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/track/GetSingleActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"track",
+										"GetSingleActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "65e1b0484fdfbf042d13e792",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/track/DeleteActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"track",
+										"DeleteActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllActivities",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/track/GetAllActivities",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"track",
+										"GetAllActivities"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rewards",
+					"item": [
+						{
+							"name": "ClaimRewards",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "65e58b091f5795391960887d",
+											"type": "text"
+										},
+										{
+											"key": "points",
+											"value": "300",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/reward/ClaimReward",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"reward",
+										"ClaimReward"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Activities",
+					"item": [
+						{
+							"name": "joinActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "65eeb14f98129e4aa8dcf461",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "65ec4a9e2a4705013eabfc67",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/activity/joinActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"activity",
+										"joinActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "completeActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "65eeb14f98129e4aa8dcf461",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "65ec4a9e2a4705013eabfc67",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/activity/completeActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"activity",
+										"completeActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "timestamp",
+											"value": "today",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "harsh balar",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "65f41945b39c56f9eeec6335",
+											"type": "text"
+										},
+										{
+											"key": "rewardId",
+											"value": "65e56554f43b8e209dff7777",
+											"type": "text"
+										},
+										{
+											"key": "activityType",
+											"value": "running",
+											"type": "text"
+										},
+										{
+											"key": "distance",
+											"value": "5.61/km",
+											"type": "text"
+										},
+										{
+											"key": "route",
+											"type": "file",
+											"src": [
+												"postman-cloud:///1eed7957-050d-4a70-aaab-64a8b1c92b46",
+												"postman-cloud:///1eed798f-6523-4e90-aa76-66f1f5630c8c",
+												"postman-cloud:///1eee11b0-e4a2-41d0-a6f7-ba6912ae2c88"
+											]
+										},
+										{
+											"key": "duration",
+											"value": "20",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.106:3500/api/v1/activity/AddActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"106"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"activity",
+										"AddActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllUserActivities",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "65f41945b39c56f9eeec6335",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.106:3500/api/v1/activity/getAllUserActivities",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"106"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"activity",
+										"getAllUserActivities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ActivityLikeByUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "6603b66cb427d2aa22ede374",
+											"type": "text"
+										},
+										{
+											"key": "isLiked",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "66011b955f1caea4f93b6881",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.106:3500/api/v1/activity/ActivityLikeByUser",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"106"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"activity",
+										"ActivityLikeByUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ActivityCommentByUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "6603b66cb427d2aa22ede374",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "66011b955f1caea4f93b6881",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "this is nice",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.106:3500/api/v1/activity/ActivityCommentByUser",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"106"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"activity",
+										"ActivityCommentByUser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "adminRoutes",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "emailOrUsername",
+											"value": "yash",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.110:3500/api/v1/admin/login",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"110"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "yash",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "krupalbalar05@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.110:3500/api/v1/admin/register",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"110"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ManageRewards",
+					"item": [
+						{
+							"name": "getAllRewards",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageReward/getAllRewards",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageReward",
+										"getAllRewards"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddRewardDetail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "rewardName",
+											"value": "running",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "this is best",
+											"type": "text"
+										},
+										{
+											"key": "points",
+											"value": "20",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageReward/AddRewardDetail",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageReward",
+										"AddRewardDetail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateReward",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "rewardId",
+											"value": "65e55d9dc91dc9764681c6d4",
+											"type": "text"
+										},
+										{
+											"key": "points",
+											"value": "200",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageReward/UpdateReward",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageReward",
+										"UpdateReward"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteReward",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "rewardId",
+											"value": "65e55d9dc91dc9764681c6d4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageReward/DeleteReward",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageReward",
+										"DeleteReward"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ManageUsers",
+					"item": [
+						{
+							"name": "UserStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "65e58b091f5795391960887d",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageUser/UserStatus",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageUser",
+										"UserStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "65e58b091f5795391960887d",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageUser/DeleteUser",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageUser",
+										"DeleteUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageUser/getUserList",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageUser",
+										"getUserList"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Activities",
+					"item": [
+						{
+							"name": "GetAllActivities",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageActivity/GetAllActivities",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageActivity",
+										"GetAllActivities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "timestamp",
+											"value": "yashbalar",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "yash balar",
+											"type": "text"
+										},
+										{
+											"key": "rewardId",
+											"value": "65e5950e9770982a961bd8a6",
+											"type": "text"
+										},
+										{
+											"key": "activityType",
+											"value": "run",
+											"type": "text"
+										},
+										{
+											"key": "distance",
+											"value": "5.71/km",
+											"type": "text"
+										},
+										{
+											"key": "route",
+											"type": "file",
+											"src": "postman-cloud:///1eee11b0-e4a2-41d0-a6f7-ba6912ae2c88"
+										},
+										{
+											"key": "duration",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.106:3500/api/v1/manageActivity/AddActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"106"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageActivity",
+										"AddActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "65ec443af808b77346cee2a9",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "yash",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "50",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.106:3500/api/v1/manageActivity/UpdateActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"106"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageActivity",
+										"UpdateActivity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteActivity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activityId",
+											"value": "65ec443af808b77346cee2a9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://192.168.0.108:3500/api/v1/manageActivity/DeleteActivity",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"108"
+									],
+									"port": "3500",
+									"path": [
+										"api",
+										"v1",
+										"manageActivity",
+										"DeleteActivity"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
